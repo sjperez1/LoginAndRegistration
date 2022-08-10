@@ -1,0 +1,35 @@
+@using LoginAndRegistration.Models;
+@model User;
+
+<div class="container w-75 mx-auto">
+    <h1 class="mb-4">Register to this Cool Site!</h1>
+    <a href="/login">Login</a>
+    <form asp-action="CreateUser" asp-controller="User" method="post">
+        <span asp-validation-for="FirstName"></span>
+        <div class="formline mb-3">
+            <label asp-for="FirstName"></label>
+            <input class="form-control-sm" asp-for="FirstName">
+        </div>
+        <span asp-validation-for="LastName"></span>
+        <div class="formline mb-3">
+            <label asp-for="LastName"></label>
+            <input class="form-control-sm" asp-for="LastName">
+        </div>
+        <span asp-validation-for="Email"></span>
+        <div class="formline mb-3">
+            <label asp-for="Email"></label>
+            <input class="form-control-sm" asp-for="Email">
+        </div>
+        <span asp-validation-for="Password"></span>
+        <div class="formline mb-3">
+            <label asp-for="Password"></label>
+            <input class="form-control-sm" asp-for="Password">
+        </div>
+        <span asp-validation-for="ConfirmPassword"></span>
+        <div class="formline mb-3">
+            <label asp-for="ConfirmPassword"></label>
+            <input class="form-control-sm" asp-for="ConfirmPassword">
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Sign up Now</button>
+    </form>
+</div>

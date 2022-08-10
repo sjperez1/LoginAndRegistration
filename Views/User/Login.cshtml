@@ -1,0 +1,20 @@
+@using LoginAndRegistration.Models;
+@model Login;
+
+<div class="container w-75 mx-auto">
+    <h1 class="mb-4">Login to this Cool Site!</h1>
+    <a href="/">Register</a>
+    <form asp-action="LoginUser" asp-controller="User" method="post">
+        <span asp-validation-for="LoginEmail"></span>
+        <div class="formline mb-3">
+            <label asp-for="LoginEmail"></label>
+            <input class="form-control-sm" asp-for="LoginEmail">
+        </div>
+        <span asp-validation-for="LoginPassword"></span>
+        <div class="formline mb-3">
+            <label asp-for="LoginPassword"></label>
+            <input class="form-control-sm" asp-for="LoginPassword">
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Login Now</button>
+    </form>
+</div>
